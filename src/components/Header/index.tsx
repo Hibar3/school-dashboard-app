@@ -1,15 +1,14 @@
-import { HiBars3CenterLeft } from "react-icons/hi2";
-
 type Props = {
+  title?: string;
   isToggled?: boolean;
   onToggle?: () => void;
 };
 
 export const Header = (props?: Props) => {
-  const { isToggled, onToggle } = props || {};
+  const { title, isToggled, onToggle } = props || {};
 
   return (
-    <header>
+    <header className="max-w-full">
       <nav className="bg-gray-800">
         <div className="max-w-full px-2 sm:px-4 lg:px-2">
           <div className="flex h-16 items-center justify-between">
@@ -68,7 +67,7 @@ export const Header = (props?: Props) => {
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
-                    Team
+                    {title}
                   </a>
                 </div>
               </div>
@@ -114,7 +113,7 @@ export const Header = (props?: Props) => {
                     />
                   </button>
                 </div>
-                <div
+                {/* <div
                   className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
@@ -148,12 +147,12 @@ export const Header = (props?: Props) => {
                   >
                     Sign out
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
-       {/* Mobile View */}
+        {/* Mobile View */}
         {/* <div className="sm:hidden" id="mobile-menu">
           <div className="space-y-1 px-2 pb-3 pt-2">
             <a
