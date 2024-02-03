@@ -69,7 +69,6 @@ export default function Dashboard() {
               <Box />
               <Box />
               <Box />
-
               <h5>Inbox </h5>
               <div className="max-w-sm max-h-40 p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
@@ -84,7 +83,6 @@ export default function Dashboard() {
                   href="#"
                   className="inline-flex items-center p-3 text-xs font-medium text-center text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-    
                   <svg
                     className="rtl:rotate-180 w-3.5 h-3.5"
                     aria-hidden="true"
