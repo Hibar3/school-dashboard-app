@@ -1,8 +1,8 @@
 // components/Box.tsx
-
 export const Box = (props?: Props) => {
   const { title, subtitle, text, imgSrc, className } = props || {};
-  const defaultImg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJUDO4csrOn9gcdkJjZ8Sl-FZfQ1yjHgIFOA&usqp=CAU";
+  const defaultImg =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJUDO4csrOn9gcdkJjZ8Sl-FZfQ1yjHgIFOA&usqp=CAU";
 
   return (
     <div className="flex p-1 mb-2 overflow-hidden bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -18,6 +18,9 @@ export const Box = (props?: Props) => {
         <p className="text-xs font-light text-ellipsis overflow-hidden text-gray-700 dark:text-gray-400 ">
           {subtitle || "Summer term"}
         </p>
+      </div>
+      <div className="flex rounded-full w-full max-w-12  justify-self-center place-items-center justify-center items-center justify-items-center  bg-green-300">
+        <p className="text-zinc-900 font-semibold">{text || 98}</p>
       </div>
     </div>
   );

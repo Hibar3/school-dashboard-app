@@ -1,7 +1,13 @@
 "use client";
 
 import { Sidebar } from "flowbite-react";
-import { HiChartPie, HiUser } from "react-icons/hi";
+import {
+  HiChartPie,
+  HiUser,
+  HiOutlineCheckCircle,
+  HiOutlineClipboardList,
+} from "react-icons/hi";
+import { FaGraduationCap } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 
 type Props = {
@@ -33,6 +39,22 @@ export const SideBar = (props?: Props) => {
           >
             Dashboard
           </Sidebar.Item>
+          <Sidebar.Item
+            key={0}
+            href="#"
+            icon={FaGraduationCap}
+            className="text-white hover:text-gray-800"
+          >
+            Classes
+          </Sidebar.Item>
+          <Sidebar.Item
+            key={0}
+            href="#"
+            icon={HiOutlineCheckCircle}
+            className="text-white hover:text-gray-800"
+          >
+            Grades
+          </Sidebar.Item>
           <Sidebar.Collapse
             key={1}
             icon={HiUser}
@@ -54,6 +76,14 @@ export const SideBar = (props?: Props) => {
               Student
             </Sidebar.Item>
           </Sidebar.Collapse>
+          <Sidebar.Item
+            key={0}
+            href="#"
+            icon={HiOutlineClipboardList}
+            className="text-white hover:text-gray-800"
+          >
+            Notes
+          </Sidebar.Item>
         </Sidebar.ItemGroup>
       </Sidebar.Items>
     </Sidebar>

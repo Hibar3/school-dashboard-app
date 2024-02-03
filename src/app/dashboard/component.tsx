@@ -55,7 +55,8 @@ export default function Dashboard() {
                   imgSrc="https://cdn-icons-png.flaticon.com/256/10239/10239994.png"
                 />
               </div>
-              <div className="mt-2 p-2 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+              <div className="mt-2 p-2 rounded-lg">
+                <p> Your Schedule</p>
                 <div className="flex items-center mb-2 justify-center rounded  bg-gray-800 dark:bg-gray-800">
                   <Calendar />
                 </div>
@@ -81,11 +82,11 @@ export default function Dashboard() {
                 </p>
                 <a
                   href="#"
-                  className="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="inline-flex items-center p-3 text-xs font-medium text-center text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Read more
+    
                   <svg
-                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    className="rtl:rotate-180 w-3.5 h-3.5"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

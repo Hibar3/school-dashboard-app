@@ -12,11 +12,11 @@ export const ProductCard = (props?: Props) => {
         className="flex flex-col p-1 overflow-hidden bg-white border border-gray-200 rounded-lg shadow md:flex-row md:mr-2 hover:bg-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <img
-          className="object-cover rounded-t-lg h-64 sm:h-auto sm:w-40 md:rounded-none md:rounded-s-lg"
+          className="object-cover p-2 rounded-t-lg md:max-h-44 max-w-md md:w-44 md:rounded-none md:rounded-s-lg"
           src={imgSrc || defaultImg}
           alt="/"
         />
-        <div className="flex flex-col p-2 leading-normal justify-between max-w-md sm:w-96 max-h-min">
+        <div className="flex flex-col p-2 leading-normal justify-between max-w-md md:w-96 max-h-min">
           <div>
             <h5 className="text-xl text-ellipsis overflow-hidden font-bold tracking-tight text-gray-900 dark:text-white">
               {title || "Noteworthy technology acquisitions 2021"}
