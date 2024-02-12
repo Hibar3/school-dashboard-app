@@ -22,7 +22,7 @@ export const SideBar = (props?: Props) => {
     <Sidebar
       className={`[&>div]:bg-gray-900 absolute top-0 ${
         isToggled ? `left-70` : `left-0`
-      } z-40 h-screen p-2  overflow-y-auto transition-all duration-300 -translate-x-full bg-gray-900 w-64`}
+      } z-40 h-dvh inline-block items-stretch p-2 overflow-y-auto transition-all duration-300 -translate-x-full bg-gray-900 w-64`}
     >
       <div className="flex justify-end mr-4">
         <button onClick={onToggle} className="block text-white">
@@ -33,7 +33,7 @@ export const SideBar = (props?: Props) => {
         <Sidebar.ItemGroup>
           <Sidebar.Item
             key={0}
-            href="#"
+            href="/dashboard"
             icon={HiChartPie}
             className="text-white hover:text-gray-800"
           >
@@ -41,7 +41,7 @@ export const SideBar = (props?: Props) => {
           </Sidebar.Item>
           <Sidebar.Item
             key={0}
-            href="#"
+            href="/classes"
             icon={FaGraduationCap}
             className="text-white hover:text-gray-800"
           >
@@ -49,7 +49,7 @@ export const SideBar = (props?: Props) => {
           </Sidebar.Item>
           <Sidebar.Item
             key={0}
-            href="#"
+            href="/grades"
             icon={HiOutlineCheckCircle}
             className="text-white hover:text-gray-800"
           >
@@ -62,14 +62,14 @@ export const SideBar = (props?: Props) => {
             className="text-white hover:text-gray-800"
           >
             <Sidebar.Item
-              href="#"
+              href="/users/teacher"
               icon={HiUser}
               className="text-white hover:text-gray-800"
             >
               Teacher
             </Sidebar.Item>
             <Sidebar.Item
-              href="#"
+              href="/users/student"
               icon={HiUser}
               className="text-white hover:text-gray-800"
             >
