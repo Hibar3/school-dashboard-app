@@ -1,5 +1,5 @@
-/** Product card props */
-type CardProps = {
+/** Box props */
+type BoxProps = {
   /** @title card title */
   title?: string;
 

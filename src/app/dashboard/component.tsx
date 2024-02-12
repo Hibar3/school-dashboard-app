@@ -24,12 +24,11 @@ export default function Dashboard() {
     >
       <Header onToggle={toggleSidebar} />
       <SideBar isToggled={isOpen} onToggle={toggleSidebar} />
-
       <div>
-        <div className="p-2 rounded-lg border-gray-700">
+        <div className="p-2 border-gray-700 rounded-lg">
           <div className="grid grid-cols-2 grid-flow-col gap-1 mb-4">
-            <div className="p-2 row-span-2 col-span-2">
-              <div className="grid grid-cols-2 grid-rows-2 gap-y-3 gap-x-1">
+            <div className="col-span-2 row-span-2 p-2">
+              <div className="grid grid-cols-2 grid-rows-2 gap-x-1 gap-y-3">
                 <ProductCard
                   title="English 101"
                   subtitle="Learn the basics"
@@ -57,34 +56,34 @@ export default function Dashboard() {
               </div>
               <div className="mt-2 p-2 rounded-lg">
                 <p> Your Schedule</p>
-                <div className="flex items-center mb-2 justify-center rounded  bg-gray-800 dark:bg-gray-800">
+                <div className="flex items-center justify-center bg-gray-800 dark:bg-gray-800 mb-2 rounded">
                   <Calendar />
                 </div>
               </div>
             </div>
-            <div className="p-2 w-64 max-w-xs border-2 border-dashed rounded-lg border-gray-700 row-span-3 col-span-3 ">
-              <h5>Ongoing Lesson </h5>
+            <div className="col-span-3 row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg w-64 max-w-xs">
+              <h5 className="font-bold">Ongoing Lesson </h5>
               <VideoPlayer />
-              <h5 className="mt-2">Grades </h5>
+              <h5 className="mt-2 font-bold">Grades</h5>
               <Box />
               <Box />
               <Box />
-              <h5>Inbox </h5>
-              <div className="max-w-sm max-h-40 p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <h5 className="mt-2 font-bold">Inbox </h5>
+              <div className="bg-gray-800 shadow p-2 dark:border-gray-700 rounded-lg max-w-sm max-h-40">
                 <a href="#">
-                  <h5 className="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h5 className="mb-2 font-bold text-sm dark:text-white tracking-tight">
                     Noteworthy technology acquisitions 2021
                   </h5>
                 </a>
-                <p className="mb-3 text-xs font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 font-normal text-gray-400 text-xs">
                   Here are the biggest enterprise technology acquisitions of
                 </p>
                 <a
                   href="#"
-                  className="inline-flex items-center p-3 text-xs font-medium text-center text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="inline-flex items-center bg-blue-700 hover:bg-blue-800 dark:hover:bg-blue-700 dark:bg-blue-600 p-3 rounded-full font-medium text-center text-white text-xs focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
                 >
                   <svg
-                    className="rtl:rotate-180 w-3.5 h-3.5"
+                    className="w-3.5 h-3.5 rtl:rotate-180"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
