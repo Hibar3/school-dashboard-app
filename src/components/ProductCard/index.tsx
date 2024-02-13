@@ -1,9 +1,10 @@
 // components/Card.tsx
 import { Progress } from "flowbite-react";
+import Image from "next/image";
 
 export const ProductCard = (props?: CardProps) => {
   const { title, subtitle, text, imgSrc, className } = props || {};
-  const defaultImg = "https://www.flowbite-react.com/images/blog/image-4.jpg";
+  const defaultImg = "/placeholder.jpg";
 
   return (
     <>
@@ -11,11 +12,9 @@ export const ProductCard = (props?: CardProps) => {
         href="#"
         className="flex flex-col md:flex-row bg-white hover:bg-gray-300 dark:hover:bg-gray-700 dark:bg-gray-800 shadow md:mr-2 p-1 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden"
       >
-        <img
-          className="p-2 rounded-t-lg md:rounded-none md:rounded-s-lg md:w-44 max-w-md md:max-h-44 object-cover"
-          src={imgSrc || defaultImg}
-          alt="/"
-        />
+        <div className="p-2 rounded-t-lg md:rounded-none md:rounded-s-lg md:w-44 max-w-md md:max-h-44 object-cover">
+          <Image src={imgSrc || defaultImg} width={500} height={500} alt="/" />
+        </div>
         <div className="flex flex-col justify-between p-2 md:w-96 max-w-md max-h-min leading-normal">
           <div>
             <h5 className="font-bold text-ellipsis text-gray-900 text-xl dark:text-white tracking-tight overflow-hidden">
