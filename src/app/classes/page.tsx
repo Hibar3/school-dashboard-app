@@ -10,6 +10,7 @@ import {
 } from "react-icons/io5";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import Comments from "@/containers/Comments";
+import Image from "next/image";
 
 export default function Index() {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,9 +69,11 @@ export default function Index() {
                   <div className="flex-1 p-2 overflow-y-auto">
                     {/* Chat LTR */}
                     <div className="flex items-start gap-2.5 mb-4">
-                      <img
+                      <Image
                         className="rounded-full w-8 h-8"
                         src="https://i.pravatar.cc/300"
+                        width={200}
+                        height={200}
                         alt="placeholder"
                       />
                       <div className="flex flex-col bg-gray-700 dark:bg-gray-700 p-4 border-gray-200 rounded-e-xl rounded-es-xl w-full max-w-44 leading-1.5">
@@ -83,7 +86,7 @@ export default function Index() {
                           </span>
                         </div>
                         <p className="py-2 font-normal text-xs dark:text-gray-900">
-                          That's awesome. I think our users will really
+                          That is awesome. I think our users will really
                           appreciate the improvements.
                         </p>
                         <span className="font-normal text-gray-500 text-xs dark:text-gray-400">
@@ -104,7 +107,7 @@ export default function Index() {
                           </span>
                         </div>
                         <p className="py-2 font-normal text-gray-900 text-xs dark:text-white">
-                          That's awesome. I think our users will really
+                          That is awesome. I think our users will really
                           appreciate the improvements.
                         </p>
                         <span className="font-normal text-gray-500 text-xs dark:text-gray-400">
@@ -138,7 +141,7 @@ export default function Index() {
               {/* Quick Navigations */}
               <div className="mt-4">
                 <div className="flex bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                  <div className="bg-slate-200 max-w-12 text-gray-900 place-self-center rounded">
+                  <div className="max-w-12 text-gray-900 dark:text-white place-self-center rounded">
                     <IoBookOutline />
                   </div>
                   <div className="flex items-center justify-end ml-2 w-full max-h-12 leading-normal">
@@ -151,7 +154,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                  <div className="bg-slate-200 max-w-12 text-gray-900 place-self-center rounded">
+                  <div className="max-w-12 text-gray-900 dark:text-white  place-self-center rounded">
                     <IoBriefcaseOutline />
                   </div>
                   <div className="flex items-center justify-end ml-2 w-full max-h-12 leading-normal">
@@ -164,7 +167,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="flex bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                  <div className="bg-slate-200 max-w-12 text-gray-900 place-self-center rounded">
+                  <div className="max-w-12 text-gray-900 dark:text-white  place-self-center rounded">
                     <HiOutlineClipboardList />
                   </div>
                   <div className="flex items-center justify-end ml-2 w-full max-h-12 leading-normal">

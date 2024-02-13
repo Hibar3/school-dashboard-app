@@ -33,7 +33,7 @@ export default function Dashboard() {
                   title="English 101"
                   subtitle="Learn the basics"
                   text="Class Starts today at 11AM, Class-3A"
-                  imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/800px-Closed_Book_Icon.svg.png"
+                  imgSrc="/book-icon.svg.png"
                 />
                 <ProductCard
                   title="Biology"
@@ -91,9 +91,9 @@ export default function Dashboard() {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M1 5h12m0 0L9 1m4 4L9 9"
                     />
                   </svg>

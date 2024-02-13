@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // components/Box.tsx
 export const Box = (props?: BoxProps) => {
   const { title, subtitle, text, imgSrc, className } = props || {};
@@ -7,9 +9,11 @@ export const Box = (props?: BoxProps) => {
   return (
     <div className={className}>
       <div className="flex bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-1 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-        <img
+        <Image
           className="rounded-t-lg md:rounded-none md:rounded-s-lg max-w-12 object-cover"
           src={imgSrc || defaultImg}
+          width={500}
+          height={500}
           alt="/"
         />
         <div className="flex flex-col p-2 max-h-12 leading-normal">
