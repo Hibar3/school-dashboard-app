@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compile-tw-config": "tsc tailwind.config.ts --outDir dist-tw-config",
+    "tw-view": "npm run compile-tw-config && npx tailwind-config-viewer -c dist-tw-config/tailwind.config.js -o -p 5555"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
@@ -26,6 +28,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "postcss": "^8",
+    "tailwind-config-viewer": "^1.7.3",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

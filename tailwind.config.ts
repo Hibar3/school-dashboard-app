@@ -10,11 +10,20 @@ const config: Config = {
   darkMode: ["class"],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        // Define your custom colors here
+        primary: {
+          100: "#0a4ff0"
+        },
+        // Add more colors as needed
+        secondary: "#dddfe6",
       },
+      fontFamily: {
+        sans: ["Helvetica", "Arial", "sans-serif"],
+        serif: ["Georgia", "serif"],
+        mono: ["Courier", "monospace"],
+      },
+      backgroundImage: {},
     },
   },
   plugins: [require("flowbite/plugin")],
