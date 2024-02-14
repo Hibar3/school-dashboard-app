@@ -18,13 +18,13 @@ export const Calendar = () => {
     return (
       <div
         key={key}
-        className="border p-1 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300"
+        className="hover:bg-gray-300 p-1 border transition duration-500 cursor-pointer overflow-auto ease"
       >
-        <div className="flex flex-col sm:w-full w-10 overflow-hidden">
-          <div className="top h-5 w-full">
+        <div className="flex flex-col w-10 sm:w-full overflow-hidden">
+          <div className="top w-full h-5">
             <span className="text-gray-500">{key}</span>
           </div>
-          <div className="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+          <div className="bottom flex-grow py-1 w-full h-30 cursor-pointer"></div>
         </div>
       </div>
     );
@@ -32,8 +32,11 @@ export const Calendar = () => {
 
   const renderDays = (name: string, key?: number) => {
     return (
-      <th key={key} className="p-2 border-r bg-gray-800 xl:text-sm text-xs">
-        <span className="xl:block lg:block md:block sm:block hidden">
+      <th
+        key={key}
+        className="bg-white dark:bg-gray-800 p-2 border-r text-xs xl:text-sm"
+      >
+        <span className="sm:block md:block lg:block xl:block text-gray-500 dark:text-white hidden">
           {name}
         </span>
         <span className="xl:hidden lg:hidden md:hidden sm:hidden block">
@@ -48,7 +51,6 @@ export const Calendar = () => {
     const calendar = [];
     let day = 1;
 
-
     for (let i = 1; i <= daysInMonth; i++) {
       if (day > daysInMonth) break;
       totalDays.push(i);
@@ -57,12 +59,12 @@ export const Calendar = () => {
     return (
       <table className="w-full">
         <thead>
-          <tr className="grid grid-cols-7">
+          <tr className="grid grid-cols-7 border-l">
             {daysOfWeek.map((value, index) => renderDays(value, index))}
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-gray-800 rounded-lg shadow overflow-hidden">
+          <tr className="bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden">
             <td className="grid grid-cols-7">
               {totalDays.map((value, index) => renderRow(index + 1))}
             </td>
@@ -73,10 +75,10 @@ export const Calendar = () => {
   };
 
   return (
-    <div className="flex w-full m-2 bg-gray-800">
-      <div className="flex-1 wrapper rounded shadow ">
-        <div className="header flex justify-between border-b p-2">
-          <span className="text-lg font-bold">
+    <div className="flex bg-white dark:bg-gray-800 shadow m-2 w-full rounded">
+      <div className="flex-1 rounded wrapper">
+        <div className="flex justify-between p-2 border-b header">
+          <span className="font-bold text-black text-lg dark:text-white">
             {month} {currentYear}
           </span>
           <div className="buttons">
@@ -86,7 +88,7 @@ export const Calendar = () => {
                 fill="gray"
                 height="1em"
                 viewBox="0 0 16 16"
-                className="bi bi-arrow-left-circle"
+                className="bi-arrow-left-circle bi"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -109,7 +111,7 @@ export const Calendar = () => {
                 fill="gray"
                 height="1em"
                 viewBox="0 0 16 16"
-                className="bi bi-arrow-right-circle"
+                className="bi-arrow-right-circle bi"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path

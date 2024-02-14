@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "flowbite-react";
 import {
   HiChartPie,
@@ -10,19 +8,20 @@ import {
 import { FaGraduationCap } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 
-type Props = {
+/** @SideBar props */
+type SidebarProps = {
   isToggled?: boolean;
   onToggle?: () => void;
 };
 
-export const SideBar = (props?: Props) => {
+export const SideBar = (props?: SidebarProps) => {
   const { isToggled, onToggle } = props || {};
 
   return (
     <Sidebar
-      className={`[&>div]:bg-gray-900 absolute top-0 ${
+      className={`[&>div]:bg-stone-900 sm:absolute sm:top-0 sm:${
         isToggled ? `left-70` : `left-0`
-      } z-40 h-dvh inline-block items-stretch p-2 overflow-y-auto transition-all duration-300 -translate-x-full bg-gray-900 w-64`}
+      } sm:z-40 sm:h-dvh sm:inline-block sm:items-stretch sm:p-2 sm:overflow-y-auto sm:transition-all duration-300 sm:-translate-x-full bg-stone-900 dark:bg-gray-800 sm:max-w-64 hidden`}
     >
       <div className="flex justify-end mr-4">
         <button onClick={onToggle} className="block text-white">

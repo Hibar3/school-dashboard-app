@@ -13,7 +13,7 @@ export const Header = (props?: HeaderProps) => {
 
   return (
     <header className="max-w-full">
-      <nav className="bg-gray-800">
+      <nav className="bg-stone-800 dark:bg-gray-900">
         <div className="px-2 sm:px-4 lg:px-2 max-w-full">
           <div className="flex items-center justify-between h-16">
             <div className="left-0 inset-y-0 flex items-center">

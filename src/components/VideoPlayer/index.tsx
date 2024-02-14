@@ -8,8 +8,9 @@ export const VideoPlayer = (props: VideoProps) => {
   return (
     <div className={className}>
       <ReactPlayer
-       width="100%"
-       height="100%"
+        width={width || "100%"}
+        height={height || "100%"}
+        controls={true}
         url={videoUrl || "https://www.youtube.com/watch?v=LXb3EKWsInQ"}
       />
     </div>

@@ -18,7 +18,7 @@ export const ThemeSwitcher = () => {
     <div className="flex items-center justify-center dark:bg-gray-800">
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="hover:bg-gray-400 dark:hover:bg-gray-700 p-2 rounded-lg w-12 h-12"
+        className="hover:bg-gray-500 dark:hover:bg-gray-700 p-2 rounded-lg w-12 h-12"
       >
         <svg
           className="block fill-violet-700 dark:hidden"
