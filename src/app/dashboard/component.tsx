@@ -55,23 +55,29 @@ export default function Dashboard() {
                 />
               </div>
               <div className="mt-2 p-2 rounded-lg">
-                <p> Your Schedule</p>
-                <div className="flex items-center justify-center bg-gray-800 dark:bg-gray-800 mb-2 rounded">
+                <p className="font-bold text-black dark:text-white">
+                  Your Schedule
+                </p>
+                <div className="flex items-center justify-center dark:bg-gray-800 mb-2 rounded">
                   <Calendar />
                 </div>
               </div>
             </div>
             <div className="col-span-3 row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg w-64 max-w-xs">
-              <h5 className="font-bold">Ongoing Lesson </h5>
+              <h5 className="font-bold text-black dark:text-white">
+                Ongoing Lesson
+              </h5>
               <VideoPlayer />
-              <h5 className="mt-2 font-bold">Grades</h5>
+              <h5 className="mt-2 font-bold text-black dark:text-white">
+                Grades
+              </h5>
               <Box />
               <Box />
               <Box />
-              <h5 className="mt-2 font-bold">Inbox </h5>
-              <div className="bg-gray-800 shadow p-2 dark:border-gray-700 rounded-lg max-w-sm max-h-40">
+              <h5 className="mt-2 font-bold text-black dark:text-white">Inbox </h5>
+              <div className="bg-white dark:bg-gray-800 shadow p-2 dark:border-gray-700 rounded-lg max-w-sm max-h-40">
                 <a href="#">
-                  <h5 className="mb-2 font-bold text-sm dark:text-white tracking-tight">
+                  <h5 className="mb-2 font-bold text-black text-sm dark:text-white tracking-tight">
                     Noteworthy technology acquisitions 2021
                   </h5>
                 </a>
