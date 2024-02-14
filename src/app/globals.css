@@ -14,7 +14,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
     --primary-color: #0a4ff0; /* Default to primary */
-    --secondary-color: #dddfe6;  /* Default to white */
+    --secondary-color: #dddfe6; /* Default to white */
   }
 }
 
