@@ -8,3 +8,4 @@ export * from "@/components/ProductCard";
 export * from "@/components/Header";
 export * from "@/components/SideBar";
 export * from "@/components/VideoPlayer";
+export * from "@/components/Profile";
