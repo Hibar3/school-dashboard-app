@@ -3,16 +3,14 @@ import { IoSendSharp } from "react-icons/io5";
 
 export const Chatbox = () => {
   return (
-    <div className="flex flex-col bg-stone-800 dark:bg-gray-800 border-dashed border-gray-700 max-h-94 rounded">
-      <div className="flex flex-col shadow-md sm:h-96 rounded">
-        <div className="flex items-center justify-between p-2 border-b">
+    <div className="flex flex-col border-gray-700 bg-stone-800 dark:bg-gray-800 border-dashed rounded">
+      <div className="flex flex-col shadow-md rounded">
+        <div className="flex justify-between items-center p-2 border-b">
           <div className="flex items-center">
             <div className="pl-2">
-              <div className="font-semibold">
-                <a className="hover:underline" href="#">
-                  Live Chat
-                </a>
-              </div>
+              <a className="font-semibold hover:underline" href="#">
+                Live Chat
+              </a>
               <p className="text-gray-500 text-xs">Online</p>
             </div>
           </div>
@@ -30,7 +28,7 @@ export const Chatbox = () => {
             />
             <div className="flex flex-col bg-gray-700 dark:bg-gray-700 shadow p-4 rounded-e-xl rounded-es-xl w-full max-w-44 leading-1.5">
               <div className="flex items-center space-x-2 rtl:space-x-reverse">
-                <span className="font-semibold text-xs ">Bonnie Green</span>
+                <span className="font-semibold text-xs">Bonnie Green</span>
                 <span className="font-normal text-gray-400 text-xs dark:text-gray-500">
                   11:46
                 </span>
@@ -47,7 +45,7 @@ export const Chatbox = () => {
 
           {/* Chat RTL */}
           <div className="flex flex-row-reverse mb-4">
-            <div className="flex flex-col bg-gray-100 dark:bg-gray-700 shadow p-2.5 border-gray-200 rounded-ee-xl rounded-s-xl w-full max-w-[320px] leading-1.5">
+            <div className="flex flex-col border-gray-200 bg-gray-100 dark:bg-gray-700 shadow p-2.5 rounded-ee-xl rounded-s-xl w-full max-w-[320px] leading-1.5">
               <div className="flex items-center space-x-2 rtl:space-x-reverse">
                 <span className="font-semibold text-gray-900 text-xs dark:text-white">
                   You
@@ -70,7 +68,7 @@ export const Chatbox = () => {
         <div className="flex items-center p-2">
           <div className="mx-2 w-full">
             <input
-              className="border border-gray-200 rounded-full w-1/2 sm:w-full"
+              className="border-gray-200 border rounded-full w-1/2 sm:w-full"
               type="text"
               defaultValue=""
               placeholder="Aa"
