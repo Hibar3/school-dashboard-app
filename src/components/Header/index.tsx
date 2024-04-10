@@ -15,11 +15,11 @@ export const Header = (props?: HeaderProps) => {
     <header className="max-w-full">
       <nav className="bg-stone-800 dark:bg-gray-900">
         <div className="px-2 sm:px-4 lg:px-2 max-w-full">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex justify-between items-center h-16">
             <div className="left-0 inset-y-0 flex items-center">
               <button
                 type="button"
-                className="relative inline-flex items-center justify-center hover:bg-gray-700 p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="sm:inline-flex relative justify-center items-center hidden hover:bg-gray-700 p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={onToggle}
@@ -42,7 +42,7 @@ export const Header = (props?: HeaderProps) => {
                 </svg>
 
                 <svg
-                  className="w-6 h-6 hidden"
+                  className="hidden w-6 h-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
@@ -57,8 +57,8 @@ export const Header = (props?: HeaderProps) => {
                 </svg>
               </button>
             </div>
-            <div className="flex flex-1 items-center sm:items-stretch justify-center sm:justify-start">
-              <div className="sm:block sm:ml-6 hidden">
+            <div className="flex flex-1 justify-center sm:justify-start items-center sm:items-stretch">
+              <div className="sm:block hidden sm:ml-6">
                 <div className="flex space-x-4">
                   <a
                     href="#"
@@ -153,7 +153,7 @@ export const Header = (props?: HeaderProps) => {
         </div>
         {/* Mobile View */}
         {/* <div className="sm:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="space-y-1 px-2 pt-2 pb-3">
             <a
               href="#"
               className="block bg-gray-900 px-3 py-2 rounded-md font-medium text-base text-white"
