@@ -36,10 +36,10 @@ export const Calendar = () => {
         key={key}
         className="bg-white dark:bg-gray-800 p-2 border-r text-xs xl:text-sm"
       >
-        <span className="sm:block md:block lg:block xl:block text-gray-500 dark:text-white hidden">
+        <span className="sm:block md:block lg:block xl:block hidden text-gray-500 dark:text-white">
           {name}
         </span>
-        <span className="xl:hidden lg:hidden md:hidden sm:hidden block">
+        <span className="block sm:hidden md:hidden lg:hidden xl:hidden">
           {name.slice(0, 3)}
         </span>
       </th>
@@ -75,7 +75,7 @@ export const Calendar = () => {
   };
 
   return (
-    <div className="flex bg-white dark:bg-gray-800 shadow m-2 w-full rounded">
+    <div className="flex bg-white dark:bg-gray-800 shadow m-2 rounded w-full">
       <div className="flex-1 rounded wrapper">
         <div className="flex justify-between p-2 border-b header">
           <span className="font-bold text-black text-lg dark:text-white">
