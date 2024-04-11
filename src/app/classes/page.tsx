@@ -22,7 +22,7 @@ export default function Index() {
     <View>
       <div>
         <div className="border-gray-700 p-1 rounded-lg">
-          <div className="gap-1 grid grid-cols-2 grid-flow-col mb-4">
+          <div className="gap-1 sm:grid grid-cols-2 grid-flow-col mb-4">
             <div className="col-span-2 row-span-2 p-2 sm:w-full">
               {/* Video Player */}
               <div className="p-2 border border-dashed rounded-lg">
@@ -46,7 +46,7 @@ export default function Index() {
 
             {/* Side Panel */}
             <div
-              className={`flex-1 col-span-3 row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg max-w-64 ${
+              className={`col-span-3 row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg max-w-[300px] sm:${
                 isOpen ? "w-48" : "w-64"
               } transition-all duration-300`}
             >
