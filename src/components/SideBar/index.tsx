@@ -41,7 +41,7 @@ export const SideBar = (props?: SidebarProps) => {
               Dashboard
             </Sidebar.Item>
             <Sidebar.Item
-              key={0}
+              key={1}
               href="/classes"
               icon={FaGraduationCap}
               className="text-white hover:text-gray-800"
@@ -49,7 +49,7 @@ export const SideBar = (props?: SidebarProps) => {
               Classes
             </Sidebar.Item>
             <Sidebar.Item
-              key={0}
+              key={2}
               href="/grades"
               icon={HiOutlineCheckCircle}
               className="text-white hover:text-gray-800"
@@ -57,7 +57,6 @@ export const SideBar = (props?: SidebarProps) => {
               Grades
             </Sidebar.Item>
             <Sidebar.Collapse
-              key={1}
               icon={HiUser}
               label="Users"
               className="text-white hover:text-gray-800"
@@ -78,7 +77,7 @@ export const SideBar = (props?: SidebarProps) => {
               </Sidebar.Item>
             </Sidebar.Collapse>
             <Sidebar.Item
-              key={0}
+              key={3}
               href="#"
               icon={HiOutlineClipboardList}
               className="text-white hover:text-gray-800"
