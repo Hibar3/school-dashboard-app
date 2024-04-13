@@ -12,12 +12,14 @@ export const View = ({
     setIsOpen(!isOpen);
   };
   return (
+    <div className={`h-dvh`}>
     <div className={`flex flex-row`}>
       <SideBar isToggled={isOpen} onToggle={toggleSidebar} />
-      <div className={`flex-1 w-full transition-all duration-300`}>
+      <div className={`flex-1 transition-all duration-300`}>
         <Header onToggle={toggleSidebar} />
         {children}
       </div>
+    </div>
     </div>
   );
 };
