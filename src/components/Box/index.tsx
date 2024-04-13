@@ -8,7 +8,7 @@ export const Box = (props?: BoxProps) => {
 
   return (
     <div className={className}>
-      <div className="flex bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-1 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+      <div className="flex border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-1 border rounded-lg overflow-hidden">
         <Image
           className="rounded-t-lg md:rounded-none md:rounded-s-lg max-w-12 object-cover"
           src={imgSrc || defaultImg}
@@ -20,11 +20,11 @@ export const Box = (props?: BoxProps) => {
           <h5 className="font-bold text-ellipsis text-gray-900 text-sm dark:text-white tracking-tight overflow-hidden">
             {title || "Mid-term paper"}
           </h5>
-          <p className="font-light text-ellipsis text-gray-700 text-xs dark:text-gray-400 overflow-hidden ">
+          <p className="font-light text-ellipsis text-gray-700 text-xs dark:text-gray-400 overflow-hidden">
             {subtitle || "Summer term"}
           </p>
         </div>
-        <div className="flex justify-items-center items-center place-items-center justify-center justify-self-center bg-green-300 rounded-full w-full max-w-12">
+        <div className="flex justify-center items-center bg-green-300 ml-10 sm:ml-1 rounded-full w-full max-w-12">
           <p className="font-semibold text-zinc-900">{text || 98}</p>
         </div>
       </div>

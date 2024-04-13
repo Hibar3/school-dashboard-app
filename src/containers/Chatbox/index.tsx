@@ -68,7 +68,7 @@ export const Chatbox = () => {
         <div className="flex items-center p-2">
           <div className="mx-2 w-full">
             <input
-              className="border-gray-200 border rounded-full w-1/2 sm:w-full"
+              className="border-gray-200 border rounded-full w-48 sm:w-full"
               type="text"
               defaultValue=""
               placeholder="Aa"

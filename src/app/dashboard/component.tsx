@@ -1,34 +1,16 @@
 "use client";
 
-import {
-  Header,
-  SideBar,
-  ProductCard,
-  Calendar,
-  Box,
-  VideoPlayer,
-} from "@/components";
-import { useState } from "react";
+import { ProductCard, Calendar, Box, VideoPlayer } from "@/components";
+import View from "@/containers/View";
 
 export default function Dashboard() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div
-      className={`flex-1 ${
-        isOpen ? "ml-64" : "ml-0"
-      } transition-all duration-300`}
-    >
-      <Header onToggle={toggleSidebar} />
-      <SideBar isToggled={isOpen} onToggle={toggleSidebar} />
-      <div>
-        <div className="p-2 border-gray-700 rounded-lg">
-          <div className="grid grid-cols-2 grid-flow-col gap-1 mb-4">
+    <View>
+      <div className="flex-1">
+        <div className="border-gray-700 p-2 rounded-lg">
+          <div className="gap-1 sm:grid sm:grid-cols-2 sm:grid-flow-col mb-4">
             <div className="col-span-2 row-span-2 p-2">
-              <div className="grid grid-cols-2 grid-rows-2 gap-x-1 gap-y-3">
+              <div className="gap-x-1 gap-y-3 grid grid-cols-2 grid-rows-2">
                 <ProductCard
                   title="English 101"
                   subtitle="Learn the basics"
@@ -58,12 +40,12 @@ export default function Dashboard() {
                 <p className="font-bold text-black dark:text-white">
                   Your Schedule
                 </p>
-                <div className="flex items-center justify-center dark:bg-gray-800 mb-2 rounded">
+                <div className="flex justify-center items-center dark:bg-gray-800 mb-2 rounded">
                   <Calendar />
                 </div>
               </div>
             </div>
-            <div className="col-span-3 row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg w-64 max-w-xs">
+            <div className="border-2 border-gray-700 col-span-3 row-span-3 p-2 border-dashed rounded-lg sm:w-64 max-w-xs">
               <h5 className="font-bold text-black dark:text-white">
                 Ongoing Lesson
               </h5>
@@ -74,8 +56,10 @@ export default function Dashboard() {
               <Box />
               <Box />
               <Box />
-              <h5 className="mt-2 font-bold text-black dark:text-white">Inbox </h5>
-              <div className="bg-white dark:bg-gray-800 shadow p-2 dark:border-gray-700 rounded-lg max-w-sm max-h-40">
+              <h5 className="mt-2 font-bold text-black dark:text-white">
+                Inbox
+              </h5>
+              <div className="dark:border-gray-700 bg-white dark:bg-gray-800 shadow p-2 rounded-lg max-w-sm max-h-40">
                 <a href="#">
                   <h5 className="mb-2 font-bold text-black text-sm dark:text-white tracking-tight">
                     Noteworthy technology acquisitions 2021
@@ -109,6 +93,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </div>
+    </View>
   );
 }
