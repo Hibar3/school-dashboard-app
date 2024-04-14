@@ -1,11 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-const Charts = dynamic(() => import("react-apexcharts"), { ssr: false });
+import { Props as ApexChartProps } from "react-apexcharts";
+// const Charts = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-/** this is a work around for running ApexChart without SSR */
-
-export function ApexChart(props?: any) {
+// this is a work around for running ApexChart without SSR //
+export const ApexChart: React.FC<ApexChartProps> = (props) => {
   const [Chart, setChart] = useState<any>();
   const hasType = typeof props?.type !== "undefined";
 
@@ -16,6 +16,6 @@ export function ApexChart(props?: any) {
   }, []);
 
   return hasType && Chart && <Chart {...props} />;
-}
+};
 
 export default ApexChart;
