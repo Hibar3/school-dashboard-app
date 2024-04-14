@@ -11,8 +11,9 @@ import {
 import { HiOutlineClipboardList } from "react-icons/hi";
 import GradeTable from "@/containers/Table";
 import { Pagination } from "flowbite-react";
-import Chart from "react-apexcharts";
-
+import ApexChart from "react-apexcharts";
+import { Pie } from "react-chartjs-2";
+import "chart.js/auto"; // lazy import for chart.js
 
 const options = {
   chart: {
@@ -29,6 +30,22 @@ const series = [
     data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
   },
 ];
+
+const data = {
+  labels: ["Red", "Blue", "Yellow"],
+  datasets: [
+    {
+      label: "My First Dataset",
+      data: [300, 50, 100],
+      backgroundColor: [
+        "rgb(255, 99, 132)",
+        "rgb(54, 162, 235)",
+        "rgb(255, 205, 86)",
+      ],
+      hoverOffset: 4,
+    },
+  ],
+};
 
 export default function Index() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -77,14 +94,14 @@ export default function Index() {
               {/* Chart Section*/}
               <div className="sm:flex sm:flex-1 mt-2 p-1 border border-dashed rounded-lg w-full overflow-x-auto">
                 {/* Bar Chart */}
-                <div className="sm:flex sm:flex-1 m-2 border border-dashed rounded-lg w-full">
+                <div className="sm:flex sm:flex-1 m-2 rounded-lg w-full">
                   <div className="sm:flex sm:flex-1 bg-white dark:bg-gray-800 shadow p-2 sm:p-4 rounded-lg w-full">
-                    <div className="sm:flex justify-between border-gray-200 dark:border-gray-700 mb-4 pb-4 border-b">
-                      <div className="flex border border-dashed">
-                        <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 rounded-lg w-12 h-12 me-3">
+                    <div className="sm:flex sm:flex-1 justify-between border-gray-200 dark:border-gray-700 mb-4 pb-4 border-b">
+                      <div className="flex flex-1 border border-dashed">
+                        <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 p-2 rounded-lg w-12 h-12 me-2">
                           {renderIcon()}
                         </div>
-                        <div>
+                        <div className="items-center border border-dashed w-full">
                           <h5 className="pb-1 font-bold text-gray-900 text-xl dark:text-white leading-none">
                             In Perspective
                           </h5>
@@ -93,17 +110,17 @@ export default function Index() {
                           </p>
                           <div
                             id="bar-chart"
-                            className="border border-dashed overflow-x-auto"
+                            className="items-center border border-dashed overflow-x-auto"
                           >
-                            <Chart
+                            <ApexChart
                               options={options}
                               series={series}
                               type="bar"
-                              width={"280"}
+                              width={"320px"}
                             />
                           </div>
                         </div>
-                        <div>
+                        <div className="">
                           <span className="inline-flex items-center bg-green-100 dark:bg-green-900 px-2.5 py-1 rounded-md font-medium text-green-800 text-xs dark:text-green-300">
                             Active
                           </span>
@@ -113,34 +130,34 @@ export default function Index() {
                   </div>
                 </div>
                 {/* Pie Chart */}
-                <div className="sm:flex sm:flex-1 m-2 border border-dashed rounded-lg w-full">
-                  <div className="sm:flex sm:flex-1 bg-white dark:bg-gray-800 shadow p-4 sm:p-6 rounded-lg w-full">
-                    <div className="sm:flex justify-between border-gray-200 dark:border-gray-700 mb-4 pb-4 border-b">
-                      <div className="flex border border-dashed">
-                        <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 rounded-lg w-12 h-12 me-3">
+                <div className="sm:flex sm:flex-1 m-2 rounded-lg w-full">
+                  <div className="sm:flex sm:flex-1 bg-white dark:bg-gray-800 shadow p-2 sm:p-4 rounded-lg w-full">
+                    <div className="sm:flex sm:flex-1 justify-between border-gray-200 dark:border-gray-700 mb-4 pb-4 border-b">
+                      <div className="flex flex-1 border border-dashed">
+                        <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 p-2 rounded-lg w-12 h-12 me-2">
                           {renderIcon()}
                         </div>
-                        <div>
+                        <div className="items-center border border-dashed w-full">
                           <h5 className="pb-1 font-bold text-gray-900 text-xl dark:text-white leading-none">
-                            In Perspective
+                            Overall Perfomance
                           </h5>
                           <p className="font-normal text-gray-500 text-sm dark:text-gray-400">
-                            Scores by subjects
+                            Average score per Semester
                           </p>
                           <div
                             id="bar-chart"
-                            className="border border-dashed overflow-x-auto"
+                            className="flex justify-end justify-items-center items-center border border-dashed max-w-64 overflow-x-auto"
                           >
-                            <Chart
-                              options={options}
-                              series={series}
-                              type="bar"
-                              width={"280"}
+                            <Pie
+                              data={data}
+                              width={"120"}
+                              height={"120"}
+                              style={{ alignSelf: "center", padding: 10 }}
                             />
                           </div>
                         </div>
-                        <div>
-                          <span className="sm:inline-flex items-center bg-green-100 dark:bg-green-900 px-2.5 py-1 rounded-md font-medium text-green-800 text-xs dark:text-green-300">
+                        <div className="">
+                          <span className="inline-flex items-center bg-green-100 dark:bg-green-900 px-2.5 py-1 rounded-md font-medium text-green-800 text-xs dark:text-green-300">
                             Active
                           </span>
                         </div>
