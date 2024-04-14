@@ -13,7 +13,7 @@ const config: Config = {
       colors: {
         // Define your custom colors here
         primary: {
-          100: "#0a4ff0"
+          100: "#0a4ff0",
         },
         // Add more colors as needed
         secondary: "#dddfe6",
@@ -26,6 +26,11 @@ const config: Config = {
       backgroundImage: {},
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [
+    require("flowbite/plugin")({
+      charts: true,
+    }),
+    // ... other plugins
+  ],
 };
 export default config;
