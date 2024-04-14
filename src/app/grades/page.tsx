@@ -3,17 +3,19 @@
 import { useState } from "react";
 import { Profile } from "@/components";
 import View from "@/containers/View";
+import ApexChart from "@/containers/ApexCharts";
+import GradeTable from "@/containers/Table";
 import {
   IoArrowForwardCircleOutline,
   IoBookOutline,
   IoBriefcaseOutline,
 } from "react-icons/io5";
 import { HiOutlineClipboardList } from "react-icons/hi";
-import GradeTable from "@/containers/Table";
 import { Pagination } from "flowbite-react";
-import ApexChart from "react-apexcharts";
 import { Pie } from "react-chartjs-2";
 import "chart.js/auto"; // lazy import for chart.js
+
+
 
 const options = {
   chart: {
