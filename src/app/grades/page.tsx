@@ -58,7 +58,7 @@ export default function Index() {
                 <div className="sm:flex sm:flex-1 bg-white dark:bg-gray-800 shadow p-2 sm:p-4 rounded-lg w-full">
                   <div className="sm:flex sm:flex-1 justify-between border-gray-200 dark:border-gray-700 mb-4 pb-4 border-b">
                     <div className="flex flex-1 border border-dashed">
-                      <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 p-2 rounded-lg w-12 h-12 me-2">
+                      <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 p-2 sm:p-0 rounded-lg w-12 h-12 me-2">
                         {renderIcon()}
                       </div>
                       <div className="items-center border border-dashed w-full">
@@ -94,7 +94,7 @@ export default function Index() {
                 <div className="sm:flex sm:flex-1 bg-white dark:bg-gray-800 shadow p-2 sm:p-4 rounded-lg w-full">
                   <div className="sm:flex sm:flex-1 justify-between border-gray-200 dark:border-gray-700 mb-4 pb-4 border-b">
                     <div className="flex flex-1 border border-dashed">
-                      <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 p-2 rounded-lg w-12 h-12 me-2">
+                      <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 p-2 sm:p-0 rounded-lg w-12 h-12 me-2">
                         {renderIcon()}
                       </div>
                       <div className="items-center border border-dashed w-full">
