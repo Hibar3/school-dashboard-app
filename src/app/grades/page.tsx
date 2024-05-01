@@ -36,7 +36,7 @@ export default function Index() {
         {/* Double panel view -  Left + Right  */}
         <div className="gap-1 sm:grid grid-cols-2 grid-rows-2 grid-flow-col mb-4">
           {/* Left Panel */}
-          <div className="col-span-2 row-span-2 p-2 sm:w-full max-w-sm sm:max-w-screen-2xl">
+          <div className="col-span-2 row-span-2 p-2 sm:w-full">
             {/* Table */}
             <div className="p-2 border border-dashed rounded-lg">
               <p className="font-bold text-black dark:text-white">Grades</p>
@@ -126,9 +126,9 @@ export default function Index() {
 
           {/* Right Panel */}
           <div
-            className={`sm:col-span-3 sm:row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg sm:max-w-[300px] sm:${
+            className={`sm:col-span-3 sm:row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg max-w-xs sm:${
               isOpen ? "w-48" : "w-64"
-            } max-w-sm w-10/12 min-w-48 transition-all duration-300`}
+            } min-w-48 transition-all duration-300`}
           >
             {/* Profile card */}
             <p className="font-bold text-black dark:text-white">Profile</p>
