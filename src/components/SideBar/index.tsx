@@ -13,14 +13,17 @@ type SidebarProps = {
   isToggled?: boolean;
   onToggle?: () => void;
   className?: string;
+  isFixed?: boolean;
+  height?: number | string;
 };
 
 export const SideBar = (props?: SidebarProps) => {
-  const { isToggled, onToggle, className } = props || {};
-
+  const { isToggled, onToggle, className, isFixed, height = 20 } = props || {};
   return (
     <div
-      className={`[&>div]:bg-stone-900 sm:top-0 sm:z-40 sm:inline-block sm:items-stretch sm:overflow-y-auto sm:transition-all duration-300 bg-stone-900 dark:bg-gray-800 sm:max-w-64 ${
+      className={`[&>div]:bg-stone-900 sm:top-0 ${
+        isFixed && "fixed"
+      } sm:z-40  sm:inline-block sm:items-stretch sm:overflow-y-auto sm:transition-all duration-300 bg-stone-900 dark:bg-gray-800 sm:max-w-64 ${
         isToggled ? "w-64" : "w-0"
       } hidden`}
     >

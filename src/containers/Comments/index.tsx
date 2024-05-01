@@ -12,7 +12,7 @@ export const Comments = () => {
   const renderReplies = () => {
     return (
       <article className="bg-white dark:bg-gray-900 mb-3 ml-6 lg:ml-12 p-6 rounded-lg text-base">
-        <footer className="flex items-center justify-between mb-2">
+        <footer className="flex justify-between items-center mb-2">
           <div className="flex items-center">
             <p className="inline-flex items-center mr-3 font-semibold text-gray-900 text-sm dark:text-white">
               <Image
@@ -51,10 +51,10 @@ export const Comments = () => {
         <p className="text-gray-500 dark:text-gray-400">
           Much appreciated! Glad you liked it ☺️
         </p>
-        <div className="flex items-center mt-4 space-x-4">
+        <div className="flex items-center space-x-4 mt-4">
           <button
             type="button"
-            className="flex items-center font-medium text-gray-500 text-sm hover:underline dark:text-gray-400"
+            className="flex items-center font-medium text-gray-500 text-sm dark:text-gray-400 hover:underline"
           >
             <svg
               className="mr-1.5 w-3.5 h-3.5"
@@ -82,8 +82,8 @@ export const Comments = () => {
     const { name, comment, date, isReplied = false } = props || {};
     return (
       <>
-        <article className="bg-white dark:bg-gray-900 p-6 rounded-lg text-base">
-          <footer className="flex items-center justify-between mb-2">
+        <article className="bg-white dark:bg-gray-900 rounded-lg text-base">
+          <footer className="flex justify-between items-center">
             <div className="flex items-center">
               <p className="inline-flex items-center mr-3 font-semibold text-gray-900 text-sm dark:text-white">
                 <Image
@@ -133,10 +133,10 @@ export const Comments = () => {
             {comment ||
               "Very straight-to-point article. Really worth time reading. Thank you! But tools are just the instruments for the UX designers. The knowledge of the design tool are as important as the creation of the design strategy."}
           </p>
-          <div className="flex items-center mt-4 space-x-4">
+          <div className="flex items-center space-x-4 mt-4">
             <button
               type="button"
-              className="flex items-center font-medium text-gray-500 text-sm hover:underline dark:text-gray-400"
+              className="flex items-center font-medium text-gray-500 text-sm dark:text-gray-400 hover:underline"
             >
               <svg
                 className="mr-1.5 w-3.5 h-3.5"
@@ -163,21 +163,21 @@ export const Comments = () => {
   };
 
   return (
-    <section className="bg-white dark:bg-gray-900 py-8 lg:py-16 antialiased rounded">
+    <section className="bg-white dark:bg-gray-900 py-8 lg:py-16 rounded antialiased">
       <div className="mx-auto px-4 sm:max-w-2xl">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex justify-between items-center mb-4">
           <h2 className="mt-2 font-bold text-gray-900 text-lg lg:text-2xl dark:text-white">
             Discussion (20)
           </h2>
         </div>
         <form className="mb-4">
-          <div className="bg-white dark:bg-gray-800 mb-4 px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg rounded-t-lg">
+          <div className="border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 mb-4 px-4 py-2 border rounded-lg rounded-t-lg">
             <label htmlFor="comment" className="sr-only">
               Your comment
             </label>
             <textarea
               id="comment"
-              className="dark:bg-gray-800 px-0 border-0 w-full text-gray-800 text-sm focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400"
+              className="border-0 dark:bg-gray-800 px-0 w-full text-gray-800 text-sm focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400"
               placeholder="Write a comment..."
               required
             ></textarea>

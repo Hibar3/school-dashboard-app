@@ -22,21 +22,21 @@ export default function Index() {
     <View>
       <div>
         <div className="border-gray-700 p-1 rounded-lg">
-          <div className="gap-1 sm:grid grid-cols-2 grid-flow-col mb-4">
+          <div className="gap-1 sm:grid grid-cols-2 grid-flow-col">
             <div className="col-span-2 row-span-2 p-2 sm:w-full">
               {/* Video Player */}
               <div className="p-2 border border-dashed rounded-lg">
                 <p className="font-bold text-black dark:text-white">
                   Your Classes
                 </p>
-                <div className="flex justify-center items-center bg-gray-800 dark:bg-gray-800 mb-2 align-center">
+                <div className="bg-gray-800 dark:bg-gray-800 mb-2 align-center">
                   <VideoPlayer className="w-full aspect-video" />
                 </div>
               </div>
               {/* End of Video Player */}
 
               {/* Comments Section*/}
-              <div className="mt-2 p-2 border border-dashed rounded-lg">
+              <div className="mt-2 p-2 border border-dashed rounded-lg overflow-y-auto">
                 <div className="flex justify-center items-center bg-gray-800 dark:bg-gray-800 mb-2 rounded">
                   <Comments />
                 </div>
