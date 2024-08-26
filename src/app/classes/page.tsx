@@ -25,7 +25,7 @@ export default function Index() {
           <div className="gap-1 sm:grid grid-cols-2 grid-flow-col">
             <div className="col-span-2 row-span-2 p-2 sm:w-full">
               {/* Video Player */}
-              <div className="p-2 border border-dashed rounded-lg">
+              <div className="p-2 rounded-lg">
                 <p className="font-bold text-black dark:text-white">
                   Your Classes
                 </p>
@@ -36,7 +36,7 @@ export default function Index() {
               {/* End of Video Player */}
 
               {/* Comments Section*/}
-              <div className="mt-2 p-2 border border-dashed rounded-lg overflow-y-auto">
+              <div className="mt-2 p-2 rounded-lg overflow-y-auto">
                 <div className="flex justify-center items-center bg-gray-800 dark:bg-gray-800 mb-2 rounded">
                   <Comments />
                 </div>
@@ -46,7 +46,7 @@ export default function Index() {
 
             {/* Side Panel */}
             <div
-              className={`col-span-3 row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg max-w-[300px] sm:${
+              className={`col-span-3 row-span-3 p-2  rounded-lg max-w-[300px] sm:${
                 isOpen ? "w-48" : "w-64"
               } transition-all duration-300`}
             >
@@ -55,7 +55,7 @@ export default function Index() {
 
               {/* Quick Navigations */}
               <div className="mt-4">
-                <div className="flex border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 border rounded-lg overflow-hidden">
+                <div className="flex border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 rounded-lg overflow-hidden">
                   <div className="rounded max-w-12 text-gray-900 dark:text-white place-self-center">
                     <IoBookOutline />
                   </div>
@@ -68,7 +68,7 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
-                <div className="flex border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 border rounded-lg overflow-hidden">
+                <div className="flex border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 rounded-lg overflow-hidden">
                   <div className="rounded max-w-12 text-gray-900 dark:text-white place-self-center">
                     <IoBriefcaseOutline />
                   </div>
@@ -81,7 +81,7 @@ export default function Index() {
                     </p>
                   </div>
                 </div>
-                <div className="flex border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 border rounded-lg overflow-hidden">
+                <div className="flex border-gray-200 dark:border-gray-700 bg-white hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 shadow mb-2 p-2 rounded-lg overflow-hidden">
                   <div className="rounded max-w-12 text-gray-900 dark:text-white place-self-center">
                     <HiOutlineClipboardList />
                   </div>

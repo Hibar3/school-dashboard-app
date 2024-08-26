@@ -18,7 +18,7 @@ export const Calendar = () => {
     return (
       <div
         key={key}
-        className="hover:bg-gray-300 p-1 border transition duration-500 cursor-pointer overflow-auto ease"
+        className="border-gray-300 hover:bg-gray-300 p-1 border border-opacity-25 transition duration-500 cursor-pointer overflow-auto ease"
       >
         <div className="flex flex-col w-10 sm:w-full overflow-hidden">
           <div className="top w-full h-5">
@@ -34,7 +34,7 @@ export const Calendar = () => {
     return (
       <th
         key={key}
-        className="bg-white dark:bg-gray-800 p-2 border-r text-xs xl:text-sm"
+        className="border-gray-300 bg-white dark:bg-gray-800 p-2 border-r border-opacity-25 text-xs xl:text-sm"
       >
         <span className="sm:block md:block lg:block xl:block hidden text-gray-500 dark:text-white">
           {name}
@@ -59,7 +59,7 @@ export const Calendar = () => {
     return (
       <table className="w-full">
         <thead>
-          <tr className="grid grid-cols-7 border-l">
+          <tr className="border-gray-300 grid grid-cols-7 border-l border-opacity-25">
             {daysOfWeek.map((value, index) => renderDays(value, index))}
           </tr>
         </thead>
@@ -77,7 +77,7 @@ export const Calendar = () => {
   return (
     <div className="flex bg-white dark:bg-gray-800 shadow m-2 rounded w-full">
       <div className="flex-1 rounded wrapper">
-        <div className="flex justify-between p-2 border-b header">
+        <div className="flex justify-between border-gray-300 p-2 border-b border-opacity-25 header">
           <span className="font-bold text-black text-lg dark:text-white">
             {month} {currentYear}
           </span>
