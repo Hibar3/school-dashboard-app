@@ -7,7 +7,7 @@ export default function Dashboard() {
   return (
     <View>
       <div className="flex-1">
-        <div className="border-gray-700 p-2 rounded-lg">
+        <div className="p-2 rounded-lg">
           <div className="gap-1 sm:grid sm:grid-cols-2 sm:grid-flow-col mb-4">
             <div className="col-span-2 row-span-2 p-2">
               <div className="gap-x-1 gap-y-3 grid grid-cols-2 grid-rows-2">
@@ -45,7 +45,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-gray-700 col-span-3 row-span-3 p-2 border-dashed rounded-lg sm:w-64 max-w-xs">
+            <div className="border-gray-700 col-span-3 row-span-3 p-2 border-dashed rounded-lg sm:w-64 max-w-xs">
               <h5 className="font-bold text-black dark:text-white">
                 Ongoing Lesson
               </h5>
