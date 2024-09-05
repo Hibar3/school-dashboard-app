@@ -10,6 +10,7 @@ import { Pie } from "react-chartjs-2";
 import "chart.js/auto"; // lazy import for chart.js
 import { useSize } from "../lib/helper";
 import { data, options, series } from "./data";
+import { subjects } from "../lib/constants";
 
 export default function Index() {
   const windowsize = useSize();
@@ -30,6 +31,63 @@ export default function Index() {
     </svg>
   );
 
+  const subjectTable = () => {
+
+    return (
+      <div className="container mx-auto mt-10">
+        <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" className="py-3 px-6">
+                  Class Name
+                </th>
+                <th scope="col" className="py-3 px-6">
+                  Exam 1
+                </th>
+                <th scope="col" className="py-3 px-6">
+                  Exam 2
+                </th>
+                <th scope="col" className="py-3 px-6">
+                  Exam 3
+                </th>
+                <th scope="col" className="py-3 px-6">
+                  Final Paper
+                </th>
+                <th scope="col" className="py-3 px-6">
+                  Final Grade
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {subjects.map((subject) => (
+                <tr
+                  key={subject.id}
+                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {subject.name}
+                  </td>
+                  <td className="py-4 px-6">{subject.exam1}</td>
+                  <td className="py-4 px-6">{subject.exam2}</td>
+                  <td className="py-4 px-6">{subject.exam3}</td>
+                  <td className="py-4 px-6">{subject.finalPaper}</td>
+                  <td className="py-4 px-6">
+                    <span
+                      className={`px-2 py-1 rounded-full ${subject.gradeColor}`}
+                    >
+                      {subject.finalGrade}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <View>
       <div className="p-1 rounded-lg">
@@ -40,7 +98,7 @@ export default function Index() {
             {/* Table */}
             <div className="p-2 border-dashed rounded-lg">
               <p className="font-bold text-black dark:text-white">Grades</p>
-              <GradeTable />
+              {subjectTable()}
               <div className="flex sm:place-content-end mt-2 overflow-x-auto">
                 <Pagination
                   currentPage={currentPage}
@@ -126,9 +184,8 @@ export default function Index() {
 
           {/* Right Panel */}
           <div
-            className={`sm:col-span-3 sm:row-span-3 p-2 border-dashed border-gray-700 rounded-lg max-w-xs sm:${
-              isOpen ? "w-48" : "w-64"
-            } min-w-48 transition-all duration-300`}
+            className={`sm:col-span-3 sm:row-span-3 p-2 border-dashed border-gray-700 rounded-lg max-w-xs sm:${isOpen ? "w-48" : "w-64"
+              } min-w-48 transition-all duration-300`}
           >
             {/* Profile card */}
             <p className="font-bold text-black dark:text-white">Profile</p>
