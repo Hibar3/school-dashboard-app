@@ -38,7 +38,7 @@ export default function Index() {
           {/* Left Panel */}
           <div className="col-span-2 row-span-2 p-2 sm:w-full">
             {/* Table */}
-            <div className="p-2 border border-dashed rounded-lg">
+            <div className="p-2 border-dashed rounded-lg">
               <p className="font-bold text-black dark:text-white">Grades</p>
               <GradeTable />
               <div className="flex sm:place-content-end mt-2 overflow-x-auto">
@@ -52,16 +52,16 @@ export default function Index() {
             {/* End of Table */}
 
             {/* Chart Section*/}
-            <div className="sm:flex sm:flex-1 mt-2 p-1 border border-dashed rounded-lg w-full overflow-x-auto">
+            <div className="sm:flex sm:flex-1 mt-2 p-1 border-dashed rounded-lg w-full overflow-x-auto">
               {/* Bar Chart */}
               <div className="sm:flex sm:flex-1 m-2 rounded-lg w-full">
                 <div className="sm:flex sm:flex-1 bg-white dark:bg-gray-800 shadow p-2 sm:p-4 rounded-lg w-full">
                   <div className="sm:flex sm:flex-1 justify-between border-gray-200 dark:border-gray-700 mb-4 pb-4 border-b">
-                    <div className="flex flex-1 border border-dashed">
+                    <div className="flex flex-1 border-dashed">
                       <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 p-2 sm:p-0 rounded-lg w-12 h-12 me-2">
                         {renderIcon()}
                       </div>
-                      <div className="items-center border border-dashed w-full">
+                      <div className="items-center border-dashed w-full">
                         <h5 className="pb-1 font-bold text-gray-900 text-xl dark:text-white leading-none">
                           In Perspective
                         </h5>
@@ -70,7 +70,7 @@ export default function Index() {
                         </p>
                         <div
                           id="bar-chart"
-                          className="items-center border border-dashed overflow-x-auto"
+                          className="items-center border-dashed overflow-x-auto"
                         >
                           <ApexChart
                             options={options}
@@ -93,11 +93,11 @@ export default function Index() {
               <div className="sm:flex sm:flex-1 m-2 rounded-lg w-full">
                 <div className="sm:flex sm:flex-1 bg-white dark:bg-gray-800 shadow p-2 sm:p-4 rounded-lg w-full">
                   <div className="sm:flex sm:flex-1 justify-between border-gray-200 dark:border-gray-700 mb-4 pb-4 border-b">
-                    <div className="flex flex-1 border border-dashed">
+                    <div className="flex flex-1 border-dashed">
                       <div className="flex justify-center items-center bg-gray-100 dark:bg-gray-700 p-2 sm:p-0 rounded-lg w-12 h-12 me-2">
                         {renderIcon()}
                       </div>
-                      <div className="items-center border border-dashed w-full">
+                      <div className="items-center border-dashed w-full">
                         <h5 className="pb-1 font-bold text-gray-900 text-xl dark:text-white leading-none">
                           Overall Perfomance
                         </h5>
@@ -106,7 +106,7 @@ export default function Index() {
                         </p>
                         <div
                           id="bar-chart"
-                          className="flex justify-end justify-items-center items-center border border-dashed max-w-64 overflow-x-auto"
+                          className="flex justify-end justify-items-center items-center border-dashed max-w-64 overflow-x-auto"
                         >
                           <Pie data={data} width={"220"} height={"220"} />
                         </div>
@@ -126,7 +126,7 @@ export default function Index() {
 
           {/* Right Panel */}
           <div
-            className={`sm:col-span-3 sm:row-span-3 p-2 border-2 border-dashed border-gray-700 rounded-lg max-w-xs sm:${
+            className={`sm:col-span-3 sm:row-span-3 p-2 border-dashed border-gray-700 rounded-lg max-w-xs sm:${
               isOpen ? "w-48" : "w-64"
             } min-w-48 transition-all duration-300`}
           >
