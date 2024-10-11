@@ -6,7 +6,6 @@ import {
   HiOutlineClipboardList,
 } from "react-icons/hi";
 import { FaGraduationCap } from "react-icons/fa";
-import { twMerge } from "tailwind-merge";
 
 /** @SideBar props */
 type SidebarProps = {
@@ -15,15 +14,25 @@ type SidebarProps = {
   className?: string;
   isFixed?: boolean;
   height?: number | string;
+  isLongpage?: boolean; // set h-screen viewport for long pages
 };
 
 export const SideBar = (props?: SidebarProps) => {
-  const { isToggled, onToggle, className, isFixed, height = 20 } = props || {};
+  const {
+    isToggled,
+    onToggle,
+    className,
+    isFixed,
+    height = 20,
+    isLongpage = true,
+  } = props || {};
   return (
     <div
-      className={`[&>div]:bg-stone-900 sm:top-0 ${
+      className={`${
         isFixed && "fixed"
-      } sm:z-40  sm:inline-block sm:items-stretch sm:overflow-y-auto sm:transition-all duration-300 bg-stone-900 dark:bg-gray-800 sm:max-w-64 ${
+      } ${
+        isLongpage && "h-screen min-h-screen"
+      }   sm:z-40 sm:inline-block sm:overflow-y-auto sm:transition-all duration-300 bg-stone-900 dark:bg-gray-800 sm:max-w-64 ${
         isToggled ? "w-64" : "w-0"
       } hidden`}
     >

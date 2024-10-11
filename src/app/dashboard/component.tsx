@@ -6,7 +6,7 @@ import View from "@/containers/View";
 export default function Dashboard() {
   return (
     <View>
-      <div className="flex-1">
+      <div >
         <div className="p-2 rounded-lg">
           <div className="gap-1 sm:grid sm:grid-cols-2 sm:grid-flow-col mb-4">
             <div className="col-span-2 row-span-2 p-2">

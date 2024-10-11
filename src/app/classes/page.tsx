@@ -19,7 +19,7 @@ export default function Index() {
   };
 
   return (
-    <View>
+    <View isLongpage={false}>
       <div>
         <div className="border-gray-700 p-1 rounded-lg">
           <div className="gap-1 sm:grid grid-cols-2 grid-flow-col">

@@ -16,10 +16,10 @@ export const Header = (props?: HeaderProps) => {
       <nav className="bg-stone-800 dark:bg-gray-900">
         <div className="px-2 sm:px-4 lg:px-2 max-w-full">
           <div className="flex justify-between items-center h-16">
-            <div className="left-0 inset-y-0 flex items-center">
+            <div className="sm:left-0 sm:inset-y-0 sm:flex sm:items-center">
               <button
                 type="button"
-                className="sm:inline-flex relative justify-center items-center hidden hover:bg-gray-700 p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="sm:inline-flex relative justify-center items-center hover:bg-gray-700 p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-inset"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={onToggle}
@@ -113,7 +113,7 @@ export const Header = (props?: HeaderProps) => {
                   </button>
                 </div>
                 {/* <div
-                  className="right-0 z-10 absolute bg-white ring-opacity-5 shadow-lg mt-2 py-1 rounded-md w-48 origin-top-right ring-1 ring-black focus:outline-none"
+                  className="right-0 z-10 absolute bg-white ring-opacity-5 shadow-lg mt-2 py-1 rounded-md ring-1 ring-black w-48 origin-top-right focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="user-menu-button"

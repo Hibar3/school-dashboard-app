@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Header, SideBar } from "@/components";
-import { useSize } from "@/app/lib/helper";
 
 // default layout view with sidebar
 export const View = ({
   children,
+  isLongpage,
 }: Readonly<{
   children: React.ReactNode;
+  isLongpage?: boolean // see sidebar props
 }>) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = () => {
@@ -16,7 +17,7 @@ export const View = ({
   return (
     <div className={`h-dvh`}>
       <div className={`flex`}>
-        <SideBar isToggled={isOpen} onToggle={toggleSidebar} />
+        <SideBar isLongpage={isLongpage} isToggled={isOpen} onToggle={toggleSidebar} />
         <div className={`flex-1 transition-all duration-300`}>
           <Header onToggle={toggleSidebar} />
           {children}
